@@ -1,0 +1,102 @@
+// September 15th. 2025
+#include <iostream>
+    #include <string>
+    using namespace std;
+
+int main(){
+    string firstName= "John";
+    string lastName = "Doe";
+
+   // string fullName = firstName + " " + lastName; //??
+
+    cout << "First Name : " << endl;
+   // cin >> firstName; // saving user input in lastName variable
+    cout << "Last Name : " << endl;
+    //cin >> lastName;
+
+    string fullName = firstName + " " + lastName; //??
+    cout << "Fulll Name : " <<  fullName << endl;
+
+    fullName += "Jr."; 
+    cout << "Full Name with stuffix: " << fullName << endl;
+     fullName << "Dr. " + fullName;
+    
+    cout << "Full Name :" << fullName << endl;
+
+    return 0;
+
+?*
+    #include <iostream>
+    #include <string>
+    using namespace std;
+
+int main(){
+    ?*
+    string message = "Hello World!"; // 13 char
+    int messageLength = message.length();
+    int messageSize = message.size();
+
+    cout << "Lenght: " << messageLength << endl << "Size: " << messageSize << endl;
+    char  firstChar = message[0];
+    char lastChar = message[message.length()-1];
+
+    cout << "First Char: " << firstChar << endl << "last char: " << lastChar << endl;
+    */
+/*
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main (){
+    
+
+
+    string str1 = "apple";
+    string str2 = "banana" ;
+    if ((str1 > str2)){
+     cout << "Both strings are equal" <, endl;
+}
+    else if (str1 > str2){
+        cout <<"str1 is lexicographically greater than str2." << endl;
+}
+    else{
+        cout <<"str1 is elxicograohically less than str2" <<endl;
+}
+
+*/
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+//int main (){
+    bool caseInsensitiveCompare(const string& str1, const string& str2){
+        if(str1.length() != str2length()){
+            return false;
+        }
+    }
+    for (size_t i = 0; i < str1.length()); i++){
+    if(tolower(str1[1]) != tollower(str2[i])){
+        return false;
+    }
+        
+    }
+    return true;
+}
+int main(){
+    string str1 = "Hello";
+    string str2 = "hello";
+    if (caseInsensitiveCompare(str1,str2){
+        COUT <<"sTRINGS ARE case-INSENSITIVELY EQUAL" << endl;
+    }
+    else{
+    cout << "strings are Not case insensitive equal" << endl;
+        
+    }
+
+    return 0;
+    
+
+
+
+}
