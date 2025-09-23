@@ -1,0 +1,75 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+double getAverage(const vector <int> &studentID); // functions at the beginning so it can be called into the main function.
+int getHighest(const vector <int> &studentID);
+int main() {
+  vector <int> studentID  = {1020, 1030, 1040, 1050, 1023, 1025, 1027, 2018, 2019, 2087};// vector  int
+
+  cout << "Average: " << getAverage(studentID) << endl;// calling the fucnitin to print the average
+  cout << "Highest: " << getHighest(studentID) << endl; // calling the functiont to print the highest
+
+  return 0;
+}
+
+double getAverage(const vector <int> &studentID){ // using & to pass vector by reference instead of copying
+  double average = 0;
+  for (int i = 0; i < studentID.size(); i++){ // for loop to access the vector and calculate the average 
+    average += studentID[i];
+  }
+  return average; // return the average of the vector student ID
+  
+  
+}
+int getHighest(const vector <int> &studentID){// fucniton and loop to calculate highest, start by 0 so the loop pick thes a number and the start comparing
+  int highest = 0;
+  for (int i = 0; i < studentID.size(); i++){
+    if(studentID[i] > highest){
+      highest = studentID[i];
+    }
+    }
+    return highest; // return the highest number of the vector student ID
+
+  /* in this program i used a vector with the data type int and two functions to calculate the average adn the highest number. I had trouble when
+  calling the functions into the main functions because i was putting the whole thing "getHighest(const vector <int> &studentID)" to call it
+  and it kept giving me an error. For the loops i just copied the info fromthe first (average ) to the second and and the variables and 
+  modified a little with the if statemnt to compare. Also i put the main function first for better readability , but put the function name at the 
+  beginning so it can be called into the main function. I learned about the & (passed by reference) and that i can put const into a parameter.
+
+  */
+  
+}
+
+// part 2
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std; // std to avoid writting std in every line.
+
+int main(){
+  vector<string> menu; //= empty vector  // vector of strings
+
+  menu.push_back("Coke");  // push_back functions to add elements to the end of the vector.
+  menu.push_back("Sprite");
+  menu.push_back("Lemonade");
+  menu.push_back("Frappuchino");
+  menu.push_back("Boba Tea");
+  menu.insert(menu.begin()+1,"Chinola Juice"); // insert a nee element without replacing at index 1 (position 2)
+  menu.erase(menu.begin() + 3); // to erase of the elements at index 3 (which is element 4.)
+  cout << "   Menu Items :  " << endl;
+  for ( int i = 0; i < menu.size(); i++){ // range-based for lopp to able to print all the elements in the vector.
+    cout << menu[i] << endl;
+  }
+
+  /* In this program i learned how to use the .insert and .erase functions, i had to look up for both of
+  them. Also, i had trouble with the .insert because i used ".at" first, but it replaces instead of 
+  inserting. The inserting part and the .erasing were easy but i was confused and it mame me took longer
+  I accidentally put strings in the ventor instead of making it an empty vector.
+    */
+  
+
+
+  return 0;
+}
+
