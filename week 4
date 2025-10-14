@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+class Person{
+  private:
+    string name{"John Doe"};
+    int age{30};
+    char gender {'M'};
+
+  public:
+    void introduce(){
+      cout << "I am " << name << ". Age " << age;
+      if (gender == 'M'){
+      cout << "I identify as a male" << endl ;
+    }
+      else if(gender == 'F'){
+      cout << "I identify as female" << endl;
+    }
+      else{
+        cout << "Gender not specified" << endl ;
+      }
+  }
+}
+
+/// 
+
+// destructor
+// oct 6th, 2025
+#include <iostream>
+#include <string>
+using namespace std;
+
+class car{
+    string brand = "Toyota";
+    string model = "Camry";
+    int year = 2022;
+
+    public:
+    car(){// constructor
+    // nothing here, the deafault is already handle it.
+    }
+    ~car(){// destructor// to same memory and elete eveyhrint not being used
+        cout << "Deestroy " << Brand << " " << model << " " << year " " << endl;
+    }
+    car(string b, string m, int y){ // parameterized constructor
+        brand = b;
+        model = m;
+        year = y;
+    }
+    // copy constructor
+    car(const car &other){
+        brand = other.brand;
+        model = other.model;
+        year = other.year + 1;
+    }
+
+    // member fucntion
+    void starEngine(){
+        cout << "Start Eengine for: " << "Brand: " << "Model: " << "Year" << endl;
+        // member fuction
+    void accelerate(){
+        cout << "Start Eengine for: " << "Brand: " << "Model: " << "Year" << endl;
+    }
+    }
+}
