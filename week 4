@@ -63,3 +63,29 @@ class car{
     }
     }
 }
+
+// h. file
+#include "car.h"
+#include <iostream>
+uing namespace std;
+
+int main(){
+    // create a car object
+    Car car1;
+
+    //parameter
+    Car car2("Honda", "Civic", 2024);
+
+    // copy constructor
+    Car car3(car2);
+    //cpopy 2
+    Car car4(car3);
+
+    // call memb er functions
+    car1.startengine();
+    car2.startengine();
+    car3.startengine();
+    car4.startengine();
+
+    car2.accelerate();
+    car3.accelerate();
