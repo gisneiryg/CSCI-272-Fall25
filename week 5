@@ -1,0 +1,100 @@
+/*
+// oct 8,2025
+#include <iostream>
+using namespace std;
+
+int main(){
+  int number;
+  cout << "Enter number: " << endl;2
+    
+  cin>> number;
+  cout << "You enteres umber : " << number << endl;
+
+  cerr << "This is the error message \n";
+  clog << "This is the log message /n";
+  return 0;
+}
+*/
+/*
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main(){
+  string item = "coffee";
+  double price = 2.5;
+  double tax = 0.20;
+  double total = price + tax;
+
+  cout << setw(10) <<left << "Item" << setw(10) << right << "price" <<  endl; 
+  cout << setw(10) << left<< "item" << setw(10) << right << fixed << setprecision(5) << total << endl;
+  cout << setw(10) << setfill('-') << "menu" << setw(10) << left << item << setw(10) << right << total << endl;
+}
+*/
+#include <iostream>
+using namespace std;
+
+// cin.get(); get the first index
+// getline(cin, name); get the whole line, spaces included and assign to name
+// cin.ignore(10) // ignore 10 chatactters (numeric limit<,streanseize>:: max()), ''\n' - make it a full lime and when it gets to the max it makes a enw line.
+// meaning a b c d (in different lines) would be in one line.
+
+class Card{
+  public:
+  int cardNumber;
+  string cardHolder;
+};
+// type of alias CardPointer to the card
+
+// for FUN PART
+typedef Card* CardPtr; // CardPtr is an alias of Card*
+typedef double DB; // an alias od double DB
+
+int main(){
+// create a new card object
+Card myCard;
+
+  myCard.cardHolder = "Alice";
+  CardPtr.PtrtoCard = &myCard;
+
+  cout << "Card Number: " <<ptrToCard >>
+}
+
+
+// oct 14th
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+
+class Person {
+  public:
+  string name;
+  int age;
+  string gender;
+};
+int main(){
+  /*
+  string inputString = "Alice 30";
+
+
+  istringstream input(inputString);// represents input associated with a string.
+
+  Person person1;
+
+  input >> person1.name >> person1.age >> person1.gender;
+
+  cout << "Name: " << person1.name<< endl;
+  cout << "Age: " << person1.age << endl;
+  cout << "Gender: " << person1.gender << endl;
+  return 0;
+  */
+  const int SIZE = 80;
+  char buffer[SIZE]; // it means that the buffer can hold up to 80 characters.
+  cout << "Enter a sentence: \n";
+  cin.read(buffer, 5); // read up to 20 characters from the input stream and store them in the buffer array.
+  cout << "\nThe sentence you entered: \n";
+  cout.write(buffer, cin.gcount());
+  cout << endl;
+  cout << "Impiut # of char: " << cin.gcount() <<endl; // if we enter "enter" it reas that as a character/
+  return 0;
+}
