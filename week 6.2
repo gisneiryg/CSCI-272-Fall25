@@ -1,0 +1,68 @@
+// #include <iostream>
+// #include <sstream>
+// #include <iomanip>
+
+// using namespace std;
+// int main(){
+//     ostringstream oss ; // output string object oss
+//     string name = "Alice";
+//     int score = 85;
+//     double gpa = 3.876;
+
+//     // build a message using oss
+//     oss << "Student: " << name << "| score: " << "| GPA: " << fixed << setprecision(2) << gpa;
+//     //converr the strean into a string 
+//      string message = oss.str();
+//      cout << message << endl;
+//     ostringstream oss1;
+//     oss1 << "test data" << endl;
+//     cout << message << endl;
+//     cout << oss1.str() << endl;
+// }
+
+// #include <iostream>
+// #include <sstream>
+
+// using namespace std;
+
+// int main(){
+//     string whatever = "100 3.5";
+//     istringstream iss(whatever);// stream containing 100 & 3.5>> it was converted  to interger
+//     int quantity; // interger 100
+//     double price; // double 0.0
+    
+//     iss >> quantity >> price;
+//     cout << "Total cost: " << (quantity * price) << endl;
+//     cout << quantity << endl;
+//     cout << price << endl;
+// }
+
+//fail and clear
+// 
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main(){
+    string data{"Input Test 123 4.7 A"};
+    
+    istringstream iss(data);
+    
+    string exString1;
+    string exString2;
+    int exInt;
+    double exDouble;
+    char exChar;
+    
+    iss >> exString1 >> exString2 >> exInt >> exDouble >> exChar;
+    cout << "The following items were extracted from ustringstream object: "<< "\nString: "<< exString1 << "\nString: " << exString2 << "\n   int: " << exInt <<"\n Double: " << exDouble <<"\n Character: " << exChar<< endl;
+        
+    long value;
+    iss >> value;
+    if(iss.good()){
+        cout << "value is: " << value << endl;
+        }
+    else{
+            cout << "/n ISS exploded. It is empty. EOF." << endl;
+        }
+    
+}
