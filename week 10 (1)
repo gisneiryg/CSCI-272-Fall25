@@ -1,0 +1,81 @@
+// #include <iostream>
+// using namespace std;
+// //.h file
+
+// class MyNumber{
+//     private:
+//         int value; // internal stored int;
+//     public:
+//         // constructor
+//         MyNumber(int val = 0){
+//             value = val;
+//         }
+//         //getter ti read the stored value
+        
+//         int getValue() const{
+//             return value;
+//         }
+//         //oberload the munus: -num
+//         //this will not change the oriuginal Code
+//         MyNumber operator-() const{
+//             return MyNumber(value);
+//         }
+//         // overload the prefic ++: ++num 
+//         // this will change the current  object(increments value)
+//         MyNumber operator++(){
+//             ++value; // increase the stored value by 1
+//             return MyNumber(value);
+//         }
+// };
+// //main cpp
+
+// int main(){
+//     MyNumber num(10);
+    
+//     cout << "Original value: " << num.getValue()<< endl;
+    
+//     MyNumber negative = -num; // call the MyNumber:: operator endl
+//     cout << "After apppying -num: " << negative.getValue() << endl;
+    
+//     //use overloading prefits
+//     MyNumber increented = ++num;
+//     cout << "After appying ++num, num is:" <<num.getValue() << endl;
+//     cout << "Value returned by the ++num: " << increented.getValue() << endl;
+//     return 0;
+// }
+#include <iostream>
+using namespace std;
+class Interger{
+    private:
+        int value; // actual int value we will wrap
+        
+    public:
+    //constructor
+        Interger(int val = 0){
+            value = val;
+        }
+        // getter to read stored value
+        int getvalue()const{
+            return value;
+        }
+        // overload the binary + operator to add the interger objects
+        //ex. Interget c=a+b
+        
+        Interger operator+(const Interger& other) const{
+            return Interger(this->value + other.value);
+            
+        }
+};
+// main.cpp
+
+
+int main(){
+    Interger numb1(19);
+    Interger numb2(20);
+    // call numb1.operator(numb2)
+    Interger sum = numb1 + numb2;
+    cout << "Numb 1 is : " << numb1.getvalue() << endl;
+    cout << "Numb 2 is: " << numb2.getvalue() <<endl;
+    
+    cout << "Sum(numb1 + numb2): " << sum.getvalue() << endl;
+}
